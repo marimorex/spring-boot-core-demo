@@ -4,7 +4,9 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class TennnisCoach implements Coach{
-
+    public TennnisCoach(){
+        System.out.println("In Constructor: " + getClass().getName());
+    }
     @Override
     public String getDailyWorkout() {
         return "Practice your backhand volley";
