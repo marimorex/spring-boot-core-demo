@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 import java.time.Clock;
 
 @Component
-@Lazy
+//@Lazy
 public class TrackCoach implements Coach{
 
     public TrackCoach(){

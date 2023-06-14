@@ -10,18 +10,15 @@ import org.springframework.web.bind.annotation.RestController;
 public class DemoController {
     // define a private field for the dependency
     private Coach myCoach;
-    private Coach myAnotherCoach;
 
     /*
     CONSTRUCTOR INJECTION
     // define a constructor for dependency injection
     */
     @Autowired
-    public DemoController(@Qualifier("baseballCoach") Coach theCoach,
-                          @Qualifier("baseballCoach") Coach theAnotherCoach){
+    public DemoController(@Qualifier("baseballCoach") Coach theCoach){
         System.out.println("In Constructor: " + getClass().getName());
         this.myCoach = theCoach;
-        this.myAnotherCoach = theAnotherCoach;
     }
 
     /*
@@ -36,10 +33,6 @@ public class DemoController {
     public String getDailyWorkout(){
         return myCoach.getDailyWorkout();
     }
-
-    @GetMapping("/check")
-    public String check(){
-        return "Comparing Beansaa mycoach == anothercoach , " + (myCoach==myAnotherCoach);
-    }
+    
 }
 
