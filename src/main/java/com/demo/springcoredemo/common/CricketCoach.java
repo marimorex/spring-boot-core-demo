@@ -1,12 +1,13 @@
-package com.demo.springcoredemo;
+package com.demo.springcoredemo.common;
 
+import com.demo.springcoredemo.common.Coach;
 import org.springframework.stereotype.Component;
 
 @Component
 public class CricketCoach implements Coach {
     @Override
     public String getDailyWorkout() {
-        return "Practice fast bowling for 15 minutes !!! ";
+        return "Practice fast bowling for 15 minutes";
     }
 
 }
